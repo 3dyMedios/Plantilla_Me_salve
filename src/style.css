@@ -1,0 +1,1030 @@
+ /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+:not(:defined) > * {M
+  display: none;
+} */
+
+/* @import url("../Fonts/Nunito-Bold.ttf"); */
+@font-face {
+  font-family: 'Nunito';
+  src: url('https://3dymedios.com/AR/Me_Salve/Static/Fonts/Nunito-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+font-family: "Nunito", sans-serif;
+}
+:root {
+--red: #f70009fe;
+--white: #ffffff;
+}
+
+body {
+margin: 0;
+display: flex;
+padding: 10px;
+height: 100vh;
+overflow: hidden;
+flex-direction: column;
+align-items: center;
+}
+
+.contenedor {
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+padding: 10px;
+align-items: center;
+border-radius: 4px;
+background-color: var(--white);
+}
+.contenedor2 {
+position: relative;
+height: 80%;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 4px;
+}
+.container2 {
+position: absolute;
+width: 90%;
+height: 40px;
+margin-bottom: 16px;
+margin-left: 2%;
+bottom: 1px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.contenedor .carrusel {
+position: absolute;
+display: flex;
+border-radius: 4px;
+width: 100%;
+height: 100%;
+text-align: center;
+align-items: center;
+justify-content: center;
+background-color: var(--white);
+border: solid 1.5px var(--red);
+color: #555;
+font-family: "Nunito";
+font-size: 38px;
+overflow: hidden;
+z-index: 2;
+}
+.Collecion {
+position: relative;
+border-radius: 4px;
+width: 100%;
+height: 100%;
+text-align: center;
+background-color: white;
+border: solid 1.5px var(--red);
+color: #555;
+font-family: "Nunito";
+font-size: 38px;
+overflow: scroll;
+z-index: 1;
+}
+.grid-layout {
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto;
+width: 80%;
+height: 100%;
+gap: 20px;
+background-color: transparent;
+justify-content: space-around;
+margin: 4% auto;
+}
+.caja {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 10px;
+cursor: pointer;
+}
+.caja > div {
+height: 150px;
+width: 150px;
+border-radius: 4px;
+background-color: white;
+box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+  0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.caja h4 {
+padding: 0;
+margin: 0;
+color: var(--red);
+font-size: 1.5rem;
+font-weight: 900;
+}
+
+
+
+/* minituras */
+.slider {
+display: flex;
+justify-content: flex-start;
+margin-top: 2%;
+width: 100%;
+height: 15%;
+}
+
+.slider .mueble {
+display: flex;
+width: 25%;
+justify-content: flex-start;
+align-items: center;
+overflow-x: auto;
+margin-left: 20px;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+gap: 20px;
+}
+
+.botones .btnmueble {
+scroll-snap-align: start;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 80px;
+height: 80px;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 4px;
+border: none;
+box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+}
+.btnmueble > img{
+height: 100%;
+/* width: 100%; */
+}
+
+.slider .mueble .botones {
+display: flex;
+flex-direction: column;
+height: 100%;
+align-items: center;
+justify-content: center;
+}
+
+.slider .mueble .botones h4 {
+padding: 0;
+margin: 0px 0px 10px 0px;
+color: var(--red);
+font-size: 20px;
+}
+
+/* --------------------------Materialize Carrusel-------------------------*/
+.carousel{
+min-height: 500px;
+}
+.col .carousel .carousel-item{
+height: 500px;
+width: 500px;
+
+}
+.carousel .carousel-item img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 4px;
+}
+.carousel .carousel-item video{
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 4px;
+}
+.carousel .indicators .indicator-item{
+border-radius: 50%;
+transform: rotate(45deg);
+margin: 0 15px;
+background-color: #000000;
+}
+.carousel .indicators .indicator-item.active {
+background-color:var(--red);
+scale: 1.5;
+}
+/* ----------------------BOTON COMPARTIR------------------------ */
+.center {
+display: flex;
+width: 100%;
+height: 100%;
+}
+.right {
+display: flex;
+width: 40%;
+height: 100%;
+align-items: center;
+justify-content: center;
+background-size: cover;
+}
+.right > img {
+width: 60%;
+height: 60%;
+}
+
+.slider .slides2 {
+display: flex;
+width: 100%;
+justify-content: flex-end;
+align-items: center;
+overflow: hidden;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+gap: 20px;
+margin-right: 20px;
+}
+
+.slides2 .share {
+scroll-snap-align: start;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 100%;
+background-color: transparent;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+gap: 10px;
+}
+.share > h4 {
+padding: 0;
+margin: 0;
+color: var(--red);
+font-size: 20px;
+font-weight: bold;
+}
+.share > button {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 80px;
+height: 80px;
+background: white;
+font-size: 50px;
+font-weight: bold;
+color: var(--red);
+border-radius: 2px;
+border: white;
+box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+cursor: pointer;
+padding: 0px;
+}
+#trends button > span {
+display: flex;
+width: 80px;
+height: 80px;
+font-size: 60px;
+font-weight: bold;
+align-items: center;
+justify-content: center;
+}
+
+#buy button > img {
+display: flex;
+width: 80px;
+height: 80px;
+font-size: 60px;
+font-weight: bold;
+align-items: center;
+justify-content: center;
+}
+
+#features button > a{
+display: flex;
+position: relative;
+width: 100%;
+height: 100%;
+}
+#features button  a > img {
+display: flex;
+position: absolute;
+top: 0;
+/* left: -5px; */
+
+width: 80px;
+height: 80px;
+font-size: 60px;
+font-weight: bold;
+align-items: center;
+justify-content: center;
+}
+#collection button > img {
+display: flex;
+width: 80px;
+height: 80px;
+font-size: 60px;
+font-weight: bold;
+align-items: center;
+justify-content: center;
+}
+
+.material-symbols-outlined {
+font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+}
+
+.selected {
+border: 6px solid red;
+}
+
+.botones .btnmueble:focus {
+border: 3px solid var(--red);
+}
+
+.btnmueble:focus-visible {
+outline: none;
+}
+.share > button:focus {
+border: 3px solid var(--red);
+}
+
+.share > button:focus-visible {
+outline: none;
+}
+
+/* ------------------------------------------------------------ */
+/* -------------------------MEDIAQUERY------------------------- */
+/* ------------------------------------------------------------ */
+
+@media (max-width: 1600px) {
+.right {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.right > img {
+  width: 70%;
+  height: 70%;
+}
+}
+@media (max-width: 1280px) {
+.right {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.right > img {
+  width: 70%;
+  height: 70%;
+}
+.text {
+  font-size: 38px;
+}
+.text2 {
+  font-size: 38px;
+}
+}
+
+@media (max-width: 1080px) {
+.right {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.right > img {
+  width: 70%;
+  height: 70%;
+}
+.container2 {
+  position: absolute;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  bottom: 1px;
+  display: flex;
+  justify-content: flex-start;
+}
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4%;
+  width: 100%;
+  height: 15%;
+}
+
+.slider .mueble {
+  display: flex;
+  width: 25%;
+  margin-left: 5px;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+}
+
+.share > h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--red);
+  font-size: 16px;
+}
+.slider .mueble .botones {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .mueble .botones .btnmueble {
+  scroll-snap-align: start;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+
+  /* border: none; */
+}
+
+.slider .mueble .botones h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--red);
+  font-size: 16px;
+}
+
+.share > button {
+  background: white;
+  font-size: 40px;
+  width: 55px;
+  height: 55px;
+  /* margin-top: 5px; */
+}
+
+#trends button > span {
+  width: 55px;
+  height: 55px;
+  font-size: 40px;
+  font-weight: bold;
+}
+#features button a > img {
+  width: 55px;
+  height: 55px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#collection button > img {
+  width: 55px;
+  height: 55px;
+  font-size: 40px;
+  font-weight: bold;
+}
+#buy button > img {
+  width: 55px;
+  height: 55px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.caja {
+  gap: 5px;
+}
+.caja > div {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
+.caja:last-of-type > h4 {
+  font-size: 16px;
+}
+.caja h4 {
+  font-size: 16px;
+}
+.text {
+  font-size: 28px;
+}
+.text2 {
+  font-size: 28px;
+}
+/* --------------------------Materialize Carrusel-------------------------*/
+.carousel{
+  min-height: 350px;
+}
+.col .carousel .carousel-item{
+  height: 350px;
+  width: 350px;
+
+}
+.carousel .carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+.carousel .indicators .indicator-item{
+  margin: 20px 10px; 
+}
+
+}
+@media (max-width: 900px) {
+.right {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.right > img {
+  width: 60%;
+  height: 60%;
+}
+.slider > .mueble {
+  width: 25%;
+}
+.slider > .slides2 {
+  width: 100%;
+  margin-right: 0px;
+  gap: 10px;
+}
+.container2 {
+  width: 40%;
+  height: 40px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  bottom: 1px;
+}
+.text {
+  font-size: 32px;
+}
+.text2 {
+  font-size: 32px;
+}
+}
+@media (max-width: 800px) {
+.right {
+  display: none;
+}
+.container2 {
+  position: absolute;
+  width: 30%;
+  height: 40px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  bottom: 1px;
+  display: flex;
+  justify-content: flex-start;
+}
+}
+@media (max-width: 787px) {
+body {
+  margin: 0;
+  padding: 5px;
+  height: 95vh;
+  display: flex;
+}
+.carrusel {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.right {
+  display: none;
+}
+.contenedor {
+  width: 97%;
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  /* border-radius: 10px 10px 10px 10px; */
+  background-color: 0072ceff;
+}
+
+.contenedor2 .carrusel {
+  /* border-radius: 10px 10px 10px 10px; */
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.container2 {
+  position: absolute;
+  width: 30%;
+  height: 40px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  bottom: 1px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ----------------miniaturas---------------- */
+
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4%;
+  width: 100%;
+  height: 15%;
+}
+
+.slider .mueble {
+  display: flex;
+  width: 25%;
+  margin-left: 5px;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+}
+
+.slider .mueble .botones {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .mueble .botones .btnmueble {
+  scroll-snap-align: start;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+
+}
+
+.slider .mueble .botones h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--red);
+  font-size: 11px;
+}
+
+/* ----------------------BOTON COMPARTIR------------------------ */
+
+.slider .slides2 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  margin-right: 0px;
+}
+.slides2 .share {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+.share > h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--red);
+  font-size: 11px;
+}
+.share > button {
+  background: white;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+#buy button > img {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#features button > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+}
+
+#features button a > img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  font-weight: bold;
+}
+#collection button > img {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.caja {
+  gap: 5px;
+}
+.caja > div {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
+.caja:last-of-type > h4 {
+  font-size: 16px;
+}
+.caja h4 {
+  font-size: 16px;
+}
+.text {
+  font-size: 28px;
+}
+.text2 {
+  font-size: 28px;
+}
+/* --------------------------Materialize Carrusel-------------------------*/
+.carousel{
+  min-height: 250px;
+}
+.col .carousel .carousel-item{
+  height: 250px;
+  width: 250px;
+
+}
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+.carousel .indicators .indicator-item{
+  margin: 5px 5px; 
+}
+}
+@media (max-width: 481px) {
+
+.text {
+  font-size: 25px;
+}
+.text2 {
+  font-size: 25px;
+}
+}
+@media (max-width: 414px) {
+
+.text {
+  font-size: 25px;
+}
+.text2 {
+  font-size: 25px;
+}
+}
+@media (max-width: 390px) {
+
+.text {
+  font-size: 25px;
+}
+.text2 {
+  font-size: 25px;
+}
+}
+@media (max-width: 375px) {
+
+.slider .mueble {
+  width: 25%;
+}
+.slider .slides2 {
+  width: 100%;
+  gap: 5px;
+}
+
+.text {
+  font-size: 25px;
+}
+.text2 {
+  font-size: 25px;
+}
+.caja:last-of-type > h4 {
+  font-size: 15px;
+}
+.caja h4 {
+  font-size: 15px;
+}
+}
+@media (max-width: 320px) {
+/* ----------------miniaturas---------------- */
+
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4%;
+  width: 100%;
+  height: 15%;
+
+}
+
+.slider .mueble {
+  display: flex;
+  width: 30%;
+  margin-left: 5px;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+}
+
+.slider .mueble .botones {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0px;
+  /* margin-left: 0 0 0 10px; */
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .mueble .botones .btnmueble {
+  scroll-snap-align: start;
+  /* flex-shrink: 0; */
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+
+}
+
+.slider .mueble .botones h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--red);
+  font-size: 12px;
+}
+
+/* ----------------------BOTON COMPARTIR------------------------ */
+
+.slider .slides2 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  margin-right: 0px;
+}
+.slides2 .share {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+.share > h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--red);
+  font-size: 12px;
+}
+.share > button {
+  background: white;
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  margin-top: 7px;
+}
+#buy button > img {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+#features button a> img {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+#collection button > img {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+.caja {
+  gap: 5px;
+}
+.caja > div {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+}
+.caja:last-of-type > h4 {
+  font-size: 13px;
+}
+.caja h4 {
+  font-size: 13px;
+}
+.text {
+  font-size: 18px;
+}
+.text2 {
+  font-size: 18px;
+}
+br {
+  display: none;
+}
+/* --------------------------Materialize Carrusel-------------------------*/
+.carousel{
+  min-height: 200px;
+}
+.col .carousel .carousel-item{
+  height: 200px;
+  width: 200px;
+
+}
+.carousel .carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+.carousel .indicators .indicator-item{
+  margin: 20px 5px; 
+}
+}
